@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mgrdata>
+    <plugin name="i4p_ace" version="1.0.0">
+		<descr lang="en">ISP4Private - ACE code editor - with highlighting and syntax. Full functionality requires i4p_core. | Plugin page: http://isp4private.ru/plugins/ace/</descr>
+		<descr lang="ru">ISP4Private - Редактор кода ACE - с подсветкой и синтаксисом. Для полного функционала требуется i4p_core. | Страница плагина: http://isp4private.ru/plugins/ace/</descr>
+		<description lang="en">ISP4Private - ACE code editor - with highlighting and syntax. Full functionality requires i4p_core | Plugin page: http://isp4private.ru/plugins/ace/</description>
+		<description lang="ru">ISP4Private - Редактор кода ACE - с подсветкой и синтаксисом. Для полного функционала требуется i4p_core | Страница плагина: http://isp4private.ru/plugins/ace/</description>
+		<author name="ISP4Private.Ru" contacts="isp4private@gmail.com">ISP4Private.Ru</author>
+		<contact>isp4private@gmail.com</contact>
+		<url>http://isp4private.ru/download/plugins/i4p_ace.tar.gz</url>
+		<manager>ispmgr</manager>
+		<lang>php</lang>
+		<require>dom</require>
+		<depend>i4p_core 1.0.0</depend>
+		<site>http://isp4private.ru/plugins/ace/</site>
+		<name lang="en">ISP4Private - ACE code editor - with highlighting and syntax</name>
+		<name lang="ru">ISP4Private - Редактор кода ACE - с подсветкой и синтаксисом</name>
+		<version>1.0.0</version>
+	</plugin>
+	<handler name="ace.php" type="xml" minlevel="1">
+		<func>file.ace</func>
+		<func>file.ace.save</func>
+	</handler>
+	<metadata name="file">
+		<toolbar>
+			<toolbtn func="file.ace" type="edit" img="t-edit" name="fileace"/>
+		</toolbar>
+	</metadata>
+	<metadata name="file.ace" type="form">
+		<form maxwidth="yes" nosubmit="yes" helpurl="http://isp4private.ru/">
+			<field name="v" fullwidth="yes">
+				<htmldata name="v"/>
+			</field>
+			<field name="gdata">
+				<textarea name="gdata"/>
+			</field>
+			<field name="path">
+				<textarea name="path"/>
+			</field>
+		</form>
+	</metadata>
+	
+	<lang name="en">
+		<messages name="file">
+			<msg name="short_fileace">ACE editor</msg>
+			<msg name="hint_fileace">Open file in editor ACE</msg>
+		</messages>
+		<messages name="file.ace">
+			<msg name="title">File</msg>
+			<msg name="msg_error_isdir">Cannot open directory</msg>
+			<msg name="msg_error_unread">File __param__ doens't exist or is unreadable</msg>
+			<msg name="msg_error_isbin">File __param__ is a binary file</msg>
+			<msg name="msg_error_toolarge">File __param__ is too large</msg>
+		</messages>
+	</lang>
+
+	<lang name="ru">
+		<messages name="file">
+			<msg name="short_fileace">ACE редактор</msg>
+			<msg name="hint_fileace">Открыть ACE редактор</msg>
+		</messages>
+		<messages name="file.ace">
+			<msg name="title">Файл</msg>
+			<msg name="msg_error_isdir">Нельзя просмотреть директорию</msg>
+			<msg name="msg_error_unread">Файл __param__ не существует либо не может быть прочитан</msg>
+			<msg name="msg_error_isbin">Файл __param__ является бинарным файлом</msg>
+			<msg name="msg_error_toolarge">Файл __param__ имеет слишком большой размер</msg>
+		</messages>
+	</lang>
+</mgrdata>
